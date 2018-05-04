@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.l.macprojectadmin.Toko">
+    <RelativeLayout
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#b3f0ff"
+        android:elevation="5dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:id="@+id/cari"
+                android:layout_width="wrap_content"
+                android:layout_height="900dp">
+                <ImageView
+                    android:layout_marginLeft="55dp"
+                    android:src="@drawable/kimslogo"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content" />
+                <ImageView
+                    android:layout_marginLeft="10dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/pencarian"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp" />
+            </RelativeLayout>
+            <Button
+                android:visibility="invisible"
+                android:id="@+id/lihat"
+                android:layout_marginLeft="30dp"
+                android:layout_centerVertical="true"
+                android:text="lihat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <Button
+                android:visibility="visible"
+                android:id="@+id/hapus"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/sampah"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/tambahtoko"
+                android:layout_width="40dp"
+                android:layout_height="30dp" />
+            <Button
+                android:layout_centerVertical="true"
+                android:background="@drawable/filebaru"
+                android:id="@+id/tambahtoko"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                />
+
+        </RelativeLayout>
+    </RelativeLayout>
+    <ProgressBar
+        android:id="@+id/loadingnya"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_below="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:id="@+id/navkota"
+        android:padding="10dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/pilihkota"
+            android:text="Pilih Kota"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:layout_alignParentRight="true"
+            android:src="@drawable/dowarron"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <View
+            android:layout_marginTop="5dp"
+            android:background="#999999"
+            android:layout_below="@id/pilihkota"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+    </RelativeLayout>
+    <ListView
+        android:dividerHeight="5dp"
+        android:layout_below="@id/navkota"
+        android:id="@+id/listtoko"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></ListView>
+</RelativeLayout>

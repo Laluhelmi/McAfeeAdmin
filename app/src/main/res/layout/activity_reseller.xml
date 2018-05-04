@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.l.macprojectadmin.Reseller">
+
+    <RelativeLayout
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#b3f0ff"
+        android:elevation="5dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
+        <ImageView
+            android:visibility="invisible"
+            android:id="@+id/mencari"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/pencarian"
+            android:layout_width="30dp"
+            android:layout_height="30dp" />
+        <RelativeLayout
+            android:id="@+id/navigator"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+          <TextView
+              android:layout_marginLeft="5dp"
+              android:id="@+id/aktif"
+              android:text="Aktifkan"
+              android:textColor="@android:color/black"
+              android:layout_centerVertical="true"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/riwayatt"
+                android:layout_marginLeft="10dp"
+                android:textColor="@android:color/black"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/aktif"
+                android:text="Riwayat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/hapus"
+                android:id="@+id/lihat"
+                android:textColor="@android:color/black"
+                android:text="Lihat"
+                android:textSize="15dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+           <TextView
+               android:layout_centerVertical="true"
+               android:layout_marginRight="5dp"
+               android:layout_alignParentRight="true"
+               android:id="@+id/hapus"
+               android:text="Hapus"
+               android:textColor="@android:color/black"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+    <ListView
+        android:divider="#00000000"
+        android:dividerHeight="10dp"
+        android:id="@+id/listreseller"
+        android:layout_below="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></ListView>
+    <ProgressBar
+        android:id="@+id/loading"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</RelativeLayout>
